@@ -32,7 +32,36 @@ export const globalStyles = StyleSheet.create({
     backgroundColor: Colors.background,
   },
 
-  // = TARJETAS DE PERSONAJES =
+  // === BARRA DE BÚSQUEDA ===
+  searchContainer: {
+    flexDirection: "row",
+    alignItems: "center",
+    backgroundColor: Colors.cardBackground,
+    borderRadius: 12,
+    paddingHorizontal: 12,
+    paddingVertical: 8,
+    marginHorizontal: 16,
+    marginVertical: 12,
+    borderWidth: 1,
+    borderColor: Colors.border,
+  },
+
+  searchIcon: {
+    marginRight: 8,
+  },
+
+  searchInput: {
+    flex: 1,
+    fontSize: 16,
+    color: Colors.text,
+    paddingVertical: 8,
+  },
+
+  searchClearIcon: {
+    marginLeft: 8,
+  },
+
+  // === TARJETAS DE PERSONAJES ===
   characterCard: {
     flexDirection: "row",
     backgroundColor: Colors.cardBackground,
@@ -77,7 +106,7 @@ export const globalStyles = StyleSheet.create({
     color: Colors.textSecondary,
   },
 
-  // =TARJETAS DE PLANETAS =
+  // === TARJETAS DE PLANETAS ===
   planetCard: {
     backgroundColor: Colors.cardBackground,
     borderRadius: 12,
@@ -140,7 +169,7 @@ export const globalStyles = StyleSheet.create({
     backgroundColor: Colors.success,
   },
 
-  // = DETALLE DE PERSONAJE =
+  // === DETALLE DE PERSONAJE ===
   detailContainer: {
     flex: 1,
     backgroundColor: Colors.background,
@@ -247,7 +276,7 @@ export const globalStyles = StyleSheet.create({
     color: Colors.secondary,
   },
 
-  // = ESTADOS =
+  // === ESTADOS ===
   loadingContainer: {
     flex: 1,
     justifyContent: "center",
@@ -302,7 +331,7 @@ export const globalStyles = StyleSheet.create({
     textAlign: "center",
   },
 
-  // = FOOTER DE CARGA =
+  // === FOOTER DE CARGA ===
   footerLoader: {
     paddingVertical: 20,
     alignItems: "center",
@@ -312,7 +341,7 @@ export const globalStyles = StyleSheet.create({
     padding: 16,
   },
 
-  // = TABS =
+  // === TABS ===
   tabBarStyle: {
     backgroundColor: Colors.cardBackground,
     borderTopWidth: 0,
@@ -324,4 +353,3 @@ export const globalStyles = StyleSheet.create({
     height: 60,
   },
 });
-
