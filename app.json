@@ -1,11 +1,11 @@
 {
   "expo": {
-    "name": "dragon-ball-app",
-    "slug": "dragon-ball-app",
+    "name": "amiibo-app",
+    "slug": "amiibo-app",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
-    "scheme": "dragonballapp",
+    "scheme": "amiiboapp",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
@@ -41,7 +41,7 @@
       ]
     ],
     "experiments": {
-      "typedRoutes": true,
+      "typedRoutes": false,
       "reactCompiler": true
     }
   }

@@ -13,10 +13,10 @@ export const AmiiboCard: React.FC<AmiiboCardProps> = ({ amiibo }) => {
   const router = useRouter();
 
   const handlePress = () => {
-    // Combinar head y tail con un separador
     const id = `${amiibo.head}-${amiibo.tail}`;
+    // Type assertion para evitar error de TypeScript con typed routes
     router.push({
-      pathname: "/",
+      pathname: "/amiibo/[id]" as any,
       params: { id }
     });
   };
