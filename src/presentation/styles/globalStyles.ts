@@ -1,11 +1,12 @@
 import { StyleSheet } from "react-native";
 
 /**
- * Paleta de colores de la aplicación
+ * Paleta de colores de la aplicación Amiibo
  */
 export const Colors = {
-  primary: "#FF6B00",       // Naranja Dragon Ball
-  secondary: "#FFD700",     // Dorado
+  primary: "#E60012",       // Rojo Nintendo
+  secondary: "#00A4E4",     // Azul Nintendo
+  accent: "#FFD700",        // Dorado para detalles
   background: "#1A1A2E",    // Fondo oscuro
   cardBackground: "#16213E",// Fondo de tarjetas
   text: "#FFFFFF",          // Texto principal
@@ -61,8 +62,8 @@ export const globalStyles = StyleSheet.create({
     marginLeft: 8,
   },
 
-  // === TARJETAS DE PERSONAJES ===
-  characterCard: {
+  // === TARJETAS DE AMIIBOS ===
+  amiiboCard: {
     flexDirection: "row",
     backgroundColor: Colors.cardBackground,
     borderRadius: 12,
@@ -75,101 +76,54 @@ export const globalStyles = StyleSheet.create({
     elevation: 5,
   },
 
-  characterImage: {
+  amiiboImage: {
     width: 100,
     height: 100,
     borderRadius: 8,
     backgroundColor: Colors.border,
   },
 
-  characterInfo: {
+  amiiboInfo: {
     flex: 1,
     marginLeft: 12,
     justifyContent: "center",
   },
 
-  characterName: {
+  amiiboName: {
     fontSize: 18,
     fontWeight: "bold",
     color: Colors.text,
     marginBottom: 4,
   },
 
-  characterRace: {
+  amiiboCharacter: {
     fontSize: 14,
     color: Colors.secondary,
     marginBottom: 2,
   },
 
-  characterKi: {
+  amiiboSeries: {
     fontSize: 12,
     color: Colors.textSecondary,
+    marginBottom: 6,
   },
 
-  // === TARJETAS DE PLANETAS ===
-  planetCard: {
-    backgroundColor: Colors.cardBackground,
+  amiiboTypeBadge: {
+    alignSelf: "flex-start",
+    paddingHorizontal: 8,
+    paddingVertical: 4,
     borderRadius: 12,
-    marginBottom: 16,
-    overflow: "hidden",
-    shadowColor: "#000",
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.3,
-    shadowRadius: 4,
-    elevation: 5,
+    backgroundColor: Colors.primary,
   },
 
-  planetImage: {
-    width: "100%",
-    height: 200,
-    backgroundColor: Colors.border,
-  },
-
-  planetInfo: {
-    padding: 16,
-  },
-
-  planetName: {
-    fontSize: 20,
-    fontWeight: "bold",
-    color: Colors.text,
-    marginBottom: 8,
-  },
-
-  planetDescription: {
-    fontSize: 14,
-    color: Colors.textSecondary,
-    lineHeight: 20,
-  },
-
-  planetStatus: {
-    flexDirection: "row",
-    alignItems: "center",
-    marginTop: 8,
-  },
-
-  statusBadge: {
-    paddingHorizontal: 12,
-    paddingVertical: 6,
-    borderRadius: 16,
-    backgroundColor: Colors.border,
-  },
-
-  statusText: {
-    fontSize: 12,
+  amiiboTypeText: {
+    fontSize: 10,
     fontWeight: "600",
     color: Colors.text,
+    textTransform: "uppercase",
   },
 
-  statusDestroyed: {
-    backgroundColor: Colors.error,
-  },
-
-  statusActive: {
-    backgroundColor: Colors.success,
-  },
-
-  // === DETALLE DE PERSONAJE ===
+  // === DETALLE DE AMIIBO ===
   detailContainer: {
     flex: 1,
     backgroundColor: Colors.background,
@@ -188,7 +142,7 @@ export const globalStyles = StyleSheet.create({
     marginBottom: 16,
     borderWidth: 3,
     borderColor: Colors.primary,
-    backgroundColor: Colors.border,
+    backgroundColor: "transparent",
   },
 
   detailName: {
@@ -196,11 +150,14 @@ export const globalStyles = StyleSheet.create({
     fontWeight: "bold",
     color: Colors.text,
     marginBottom: 8,
+    textAlign: "center",
+    paddingHorizontal: 16,
   },
 
   detailRace: {
     fontSize: 18,
     color: Colors.secondary,
+    textAlign: "center",
   },
 
   detailContent: {
@@ -227,53 +184,15 @@ export const globalStyles = StyleSheet.create({
     fontSize: 16,
     color: Colors.textSecondary,
     fontWeight: "500",
+    flex: 1,
   },
 
   infoValue: {
     fontSize: 16,
     color: Colors.text,
     fontWeight: "bold",
-  },
-
-  description: {
-    fontSize: 14,
-    color: Colors.textSecondary,
-    lineHeight: 22,
-    marginTop: 8,
-  },
-
-  // === TRANSFORMACIONES ===
-  transformationCard: {
-    backgroundColor: Colors.cardBackground,
-    borderRadius: 12,
-    padding: 12,
-    marginBottom: 12,
-    flexDirection: "row",
-    alignItems: "center",
-  },
-
-  transformationImage: {
-    width: 60,
-    height: 60,
-    borderRadius: 8,
-    backgroundColor: Colors.border,
-  },
-
-  transformationInfo: {
-    flex: 1,
-    marginLeft: 12,
-  },
-
-  transformationName: {
-    fontSize: 16,
-    fontWeight: "bold",
-    color: Colors.text,
-    marginBottom: 4,
-  },
-
-  transformationKi: {
-    fontSize: 14,
-    color: Colors.secondary,
+    flex: 2,
+    textAlign: "right",
   },
 
   // === ESTADOS ===
@@ -331,12 +250,7 @@ export const globalStyles = StyleSheet.create({
     textAlign: "center",
   },
 
-  // === FOOTER DE CARGA ===
-  footerLoader: {
-    paddingVertical: 20,
-    alignItems: "center",
-  },
-
+  // === LISTA ===
   listContent: {
     padding: 16,
   },

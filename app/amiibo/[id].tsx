@@ -4,14 +4,27 @@ import { Image } from "expo-image";
 import { useLocalSearchParams } from "expo-router";
 import React from "react";
 import { ScrollView, Text, View } from "react-native";
-import { useAmiiboDetail } from "../../../amiibo_app/src/presentation/hooks/useAmiiboDetail";
-import { globalStyles } from "../../../amiibo_app/src/presentation/styles/globalStyles";
+import { useAmiiboDetail } from "../../src/presentation/hooks/useAmiiboDetail";
+import { globalStyles } from "../../src/presentation/styles/globalStyles";
 
 export default function AmiiboDetailScreen() {
-  const { head, tail } = useLocalSearchParams<{ head: string; tail: string }>();
+  const { id } = useLocalSearchParams<{ id: string }>();
+
+  if (!id) {
+    return <LoadingState message="Cargando detalles..." />;
+  }
+
+  // Separar head y tail del identificador (formato: head-tail)
+  const parts = (id as string).split('-');
+  
+  if (parts.length !== 2) {
+    return <ErrorState message="ID de amiibo inválido" />;
+  }
+
+  const [head, tail] = parts;
 
   if (!head || !tail) {
-    return <LoadingState message="Cargando detalles..." />;
+    return <ErrorState message="ID de amiibo inválido" />;
   }
 
   const { amiibo, loading, error } = useAmiiboDetail(head, tail);
