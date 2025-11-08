@@ -7,7 +7,7 @@ import axios, { AxiosError } from "axios";
  * - Establece headers por defecto
  */
 export const apiClient = axios.create({
-  baseURL: "https://dragonball-api.com/api",
+  baseURL: "https://www.amiiboapi.com/api",
   timeout: 30000,
   headers: {
     "Content-Type": "application/json",
