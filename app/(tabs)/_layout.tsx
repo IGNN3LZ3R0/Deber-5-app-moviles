@@ -26,6 +26,15 @@ export default function TabLayout() {
           ),
         }}
       />
+      <Tabs.Screen
+        name="series"
+        options={{
+          title: "Series",
+          tabBarIcon: ({ color, size }) => (
+            <Ionicons name="albums" size={size} color={color} />
+          ),
+        }}
+      />
     </Tabs>
   );
 }
